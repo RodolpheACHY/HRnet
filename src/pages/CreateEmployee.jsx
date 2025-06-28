@@ -292,8 +292,8 @@ const SelectStates = ({ value, onChange }) => {
   return (
     <Select
       options={stateOptions}
-      value={stateOptions.find(option => option.value === value)}
-      onChange={(selectedOption) => onChange(selectedOption ? selectedOption.value : '')}
+      value={stateOptions.find(option => option.label === value)}
+      onChange={(selectedOption) => onChange(selectedOption ? selectedOption.label : '')}
       placeholder="Select a state"
       isClearable
       isSearchable
@@ -335,8 +335,8 @@ const SelectDepartments = ({ value, onChange }) => {
   return (
     <Select
       options={departmentOptions}
-      value={departmentOptions.find(option => option.value === value)}
-      onChange={(selectedOption) => onChange(selectedOption ? selectedOption.value : '')}
+      value={departmentOptions.find(option => option.label === value)}
+      onChange={(selectedOption) => onChange(selectedOption ? selectedOption.label : '')}
       placeholder="Select a department"
       isClearable
       isSearchable

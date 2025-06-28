@@ -36,4 +36,9 @@ const useEmployeeStore = create(
   )
 )
 
-export default useEmployeeStore 
+export default useEmployeeStore
+
+// Exposer le store globalement pour utilisation depuis la console
+if (typeof window !== 'undefined') {
+  window.__HRNET_STORE__ = useEmployeeStore;
+} 
