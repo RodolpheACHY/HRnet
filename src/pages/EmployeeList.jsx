@@ -33,7 +33,7 @@ const EmployeeList = () => {
         header: 'Start Date',
         cell: info => {
           const date = new Date(info.getValue())
-          return date.toLocaleDateString('fr-FR')
+          return date.toLocaleDateString('en-US')
         },
       }),
       columnHelper.accessor('department', {
@@ -44,7 +44,7 @@ const EmployeeList = () => {
         header: 'Date of Birth',
         cell: info => {
           const date = new Date(info.getValue())
-          return date.toLocaleDateString('fr-FR')
+          return date.toLocaleDateString('en-US')
         },
       }),
       columnHelper.accessor('street', {
@@ -94,9 +94,10 @@ const EmployeeList = () => {
         {/* Select for Pagination: Employees per page */}
         <div className="table-controls">
           <div className="table-length">
-            <label>
+            <label htmlFor="page-size-select">
               Show 
               <select
+                id="page-size-select"
                 value={table.getState().pagination.pageSize}
                 onChange={e => {
                   table.setPageSize(Number(e.target.value))
@@ -115,7 +116,9 @@ const EmployeeList = () => {
 
           {/* Search bar */}
           <div className="table-search">
+          <label htmlFor="search-input" className="sr-only">Search</label> 
             <input
+              id="search-input"
               type="text"
               placeholder="Rechercher un employé..."
               value={globalFilter ?? ''}

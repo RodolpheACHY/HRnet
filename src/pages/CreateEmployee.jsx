@@ -4,246 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css'
 import Modal from '../components/Modal'
 import useEmployeeStore from '../store/employeeStore'
 import Select from 'react-select'
-
-// Tableau des états américains
-const states = [
-  {
-    "name": "Alabama",
-    "abbreviation": "AL"
-  },
-  {
-    "name": "Alaska",
-    "abbreviation": "AK"
-  },
-  {
-    "name": "American Samoa",
-    "abbreviation": "AS"
-  },
-  {
-    "name": "Arizona",
-    "abbreviation": "AZ"
-  },
-  {
-    "name": "Arkansas",
-    "abbreviation": "AR"
-  },
-  {
-    "name": "California",
-    "abbreviation": "CA"
-  },
-  {
-    "name": "Colorado",
-    "abbreviation": "CO"
-  },
-  {
-    "name": "Connecticut",
-    "abbreviation": "CT"
-  },
-  {
-    "name": "Delaware",
-    "abbreviation": "DE"
-  },
-  {
-    "name": "District Of Columbia",
-    "abbreviation": "DC"
-  },
-  {
-    "name": "Federated States Of Micronesia",
-    "abbreviation": "FM"
-  },
-  {
-    "name": "Florida",
-    "abbreviation": "FL"
-  },
-  {
-    "name": "Georgia",
-    "abbreviation": "GA"
-  },
-  {
-    "name": "Guam",
-    "abbreviation": "GU"
-  },
-  {
-    "name": "Hawaii",
-    "abbreviation": "HI"
-  },
-  {
-    "name": "Idaho",
-    "abbreviation": "ID"
-  },
-  {
-    "name": "Illinois",
-    "abbreviation": "IL"
-  },
-  {
-    "name": "Indiana",
-    "abbreviation": "IN"
-  },
-  {
-    "name": "Iowa",
-    "abbreviation": "IA"
-  },
-  {
-    "name": "Kansas",
-    "abbreviation": "KS"
-  },
-  {
-    "name": "Kentucky",
-    "abbreviation": "KY"
-  },
-  {
-    "name": "Louisiana",
-    "abbreviation": "LA"
-  },
-  {
-    "name": "Maine",
-    "abbreviation": "ME"
-  },
-  {
-    "name": "Marshall Islands",
-    "abbreviation": "MH"
-  },
-  {
-    "name": "Maryland",
-    "abbreviation": "MD"
-  },
-  {
-    "name": "Massachusetts",
-    "abbreviation": "MA"
-  },
-  {
-    "name": "Michigan",
-    "abbreviation": "MI"
-  },
-  {
-    "name": "Minnesota",
-    "abbreviation": "MN"
-  },
-  {
-    "name": "Mississippi",
-    "abbreviation": "MS"
-  },
-  {
-    "name": "Missouri",
-    "abbreviation": "MO"
-  },
-  {
-    "name": "Montana",
-    "abbreviation": "MT"
-  },
-  {
-    "name": "Nebraska",
-    "abbreviation": "NE"
-  },
-  {
-    "name": "Nevada",
-    "abbreviation": "NV"
-  },
-  {
-    "name": "New Hampshire",
-    "abbreviation": "NH"
-  },
-  {
-    "name": "New Jersey",
-    "abbreviation": "NJ"
-  },
-  {
-    "name": "New Mexico",
-    "abbreviation": "NM"
-  },
-  {
-    "name": "New York",
-    "abbreviation": "NY"
-  },
-  {
-    "name": "North Carolina",
-    "abbreviation": "NC"
-  },
-  {
-    "name": "North Dakota",
-    "abbreviation": "ND"
-  },
-  {
-    "name": "Northern Mariana Islands",
-    "abbreviation": "MP"
-  },
-  {
-    "name": "Ohio",
-    "abbreviation": "OH"
-  },
-  {
-    "name": "Oklahoma",
-    "abbreviation": "OK"
-  },
-  {
-    "name": "Oregon",
-    "abbreviation": "OR"
-  },
-  {
-    "name": "Palau",
-    "abbreviation": "PW"
-  },
-  {
-    "name": "Pennsylvania",
-    "abbreviation": "PA"
-  },
-  {
-    "name": "Puerto Rico",
-    "abbreviation": "PR"
-  },
-  {
-    "name": "Rhode Island",
-    "abbreviation": "RI"
-  },
-  {
-    "name": "South Carolina",
-    "abbreviation": "SC"
-  },
-  {
-    "name": "South Dakota",
-    "abbreviation": "SD"
-  },
-  {
-    "name": "Tennessee",
-    "abbreviation": "TN"
-  },
-  {
-    "name": "Texas",
-    "abbreviation": "TX"
-  },
-  {
-    "name": "Utah",
-    "abbreviation": "UT"
-  },
-  {
-    "name": "Vermont",
-    "abbreviation": "VT"
-  },
-  {
-    "name": "Virgin Islands",
-    "abbreviation": "VI"
-  },
-  {
-    "name": "Virginia",
-    "abbreviation": "VA"
-  },
-  {
-    "name": "Washington",
-    "abbreviation": "WA"
-  },
-  {
-    "name": "West Virginia",
-    "abbreviation": "WV"
-  },
-  {
-    "name": "Wisconsin",
-    "abbreviation": "WI"
-  },
-  {
-    "name": "Wyoming",
-    "abbreviation": "WY"
-  }
-]
+import { departments } from '../datas/departments'
+import { states } from '../datas/states'
 
 // Transformer les données pour React Select
 const stateOptions = states.map(state => ({
@@ -288,12 +50,13 @@ const customSelectStyles = {
 }
 
 // Composant SelectStates
-const SelectStates = ({ value, onChange }) => {
+const SelectStates = (props) => {
   return (
     <Select
+      {...props} // passe toutes les props reçues par SelectStates
       options={stateOptions}
-      value={stateOptions.find(option => option.label === value)}
-      onChange={(selectedOption) => onChange(selectedOption ? selectedOption.label : '')}
+      value={stateOptions.find(option => option.label === props.value)}
+      onChange={(selectedOption) => props.onChange(selectedOption ? selectedOption.label : '')}
       placeholder="Select a state"
       isClearable
       isSearchable
@@ -302,28 +65,6 @@ const SelectStates = ({ value, onChange }) => {
   )
 }
 
-const departments = [
-  {
-    name: "Sales",
-    abbreviation: "SAL"
-  },
- {
-    name: "Marketing",
-    abbreviation: "MAR"
-  },
-  {
-    name: "Engineering",
-    abbreviation: "ENG"
-  },
-  {
-    name: "Human Resources",
-    abbreviation: "HR"
-  },
-  {
-    name: "Legal",
-    abbreviation: "LEG"
-  },
-]
 
 // Transformer les données pour React Select
 const departmentOptions = departments.map(department => ({
@@ -331,12 +72,13 @@ const departmentOptions = departments.map(department => ({
   label: department.name
 }))
 
-const SelectDepartments = ({ value, onChange }) => {
+const SelectDepartments = (props) => {
   return (
     <Select
+      {...props} // passe toutes les props reçues par SelectStates
       options={departmentOptions}
-      value={departmentOptions.find(option => option.label === value)}
-      onChange={(selectedOption) => onChange(selectedOption ? selectedOption.label : '')}
+      value={departmentOptions.find(option => option.label === props.value)}
+      onChange={(selectedOption) => props.onChange(selectedOption ? selectedOption.label : '')}
       placeholder="Select a department"
       isClearable
       isSearchable
@@ -365,6 +107,18 @@ const CreateEmployee = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+  // Validation manuelle
+  if (!formData.state) {
+    alert('Please select a state.')
+    return
+  }
+
+  // Validation manuelle
+  if (!formData.department) {
+    alert('Please select a department.')
+    return
+  }
     setShowModal(true) // Ouvre la modale de confirmation
   }
 
@@ -378,7 +132,7 @@ const CreateEmployee = () => {
   const handleDateChange = (field, date) => {
     setFormData({
       ...formData,
-      [field]: date ? date.toISOString().split('T')[0] : ''
+      [field]: date ? date.toLocaleDateString('en-US') : ''
     })
   }
 
@@ -454,25 +208,29 @@ const CreateEmployee = () => {
           <div className="form-group">
             <label htmlFor="dateOfBirth">Date of Birth</label>
             <DatePicker
+              id="dateOfBirth"
               selected={formData.dateOfBirth ? new Date(formData.dateOfBirth) : null}
               onChange={(date) => handleDateChange('dateOfBirth', date)}
               showYearDropdown={true}
               scrollableYearDropdown={true}
               yearDropdownItemNumber={100}   // Plus d'années pour naissance
               maxDate={new Date()} 
-              dateFormat="dd/MM/yyyy"
+              dateFormat="MM/dd/yyyy"
+              required
             />
           </div>
           
           <div className="form-group">
             <label htmlFor="startDate">Start Date</label>
             <DatePicker
+              id="startDate"
               selected={formData.startDate ? new Date(formData.startDate) : null}
               onChange={(date) => handleDateChange('startDate', date)}
               showYearDropdown={true}
               scrollableYearDropdown={true}
               yearDropdownItemNumber={100}   // Plus d'années pour naissance
-              dateFormat="dd/MM/yyyy"
+              dateFormat="MM/dd/yyyy"
+              required
             />
           </div>
 
@@ -487,6 +245,7 @@ const CreateEmployee = () => {
                 type="text" 
                 value={formData.street}
                 onChange={handleChange}
+                required
               />
             </div>
 
@@ -498,12 +257,14 @@ const CreateEmployee = () => {
                 type="text" 
                 value={formData.city}
                 onChange={handleChange}
+                required
               />
             </div>
 
             <div className="form-group">
               <label htmlFor="state">State</label>
-              <SelectStates 
+              <SelectStates
+                inputId="state"
                 value={formData.state}
                 onChange={handleStateChange}
               />
@@ -517,6 +278,7 @@ const CreateEmployee = () => {
                 type="number" 
                 value={formData.zipCode}
                 onChange={handleChange}
+                required
               />
             </div>
             
@@ -525,6 +287,7 @@ const CreateEmployee = () => {
           <div className="form-group">
             <label htmlFor="department">Department</label>
             <SelectDepartments
+              inputId="department"
               value={formData.department}
               onChange={handleDepartementChange}
             />

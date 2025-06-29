@@ -23,11 +23,6 @@ const useEmployeeStore = create(
       getEmployees: () => {
         return get().employees
       },
-
-      // Supprimer tous les employés
-      resetEmployees: () => {
-        set({ employees: [] })
-      },
     }),
     {
       name: 'hrnet-employees', // Clé dans localStorage

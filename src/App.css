@@ -303,6 +303,7 @@ legend {
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
+/* Search bar */
 .table-search {
   display: flex;
   align-items: center;
@@ -321,6 +322,18 @@ legend {
   outline: none;
   border-color: #3498db;
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Pagination */
@@ -399,10 +412,16 @@ legend {
   background: white;
   padding: 0;
   border-radius: 8px;
-  min-width: 400px;
+  /* min-width: 400px; */
   max-width: 500px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+}
+
+@media (min-width: 400px) {
+  .modal-content {
+    min-width: 400px;
+  }
 }
 
 .modal-header {
@@ -601,3 +620,4 @@ legend {
     font-size: 1rem;
   }
 }
+
