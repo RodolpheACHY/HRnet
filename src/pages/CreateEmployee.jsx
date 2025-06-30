@@ -119,6 +119,19 @@ const CreateEmployee = () => {
     alert('Please select a department.')
     return
   }
+    addEmployee(formData) // Sauvegarde dans le store Zustand
+    console.log('Employee saved successfully!')
+    setFormData({
+      firstName: '',
+      lastName: '',
+      dateOfBirth: '',
+      startDate: '',
+      street: '',
+      city: '',
+      state: '',
+      zipCode: '',
+      department: ''
+    })
     setShowModal(true) // Ouvre la modale de confirmation
   }
 
@@ -153,9 +166,9 @@ const CreateEmployee = () => {
 
   const handleConfirm = () => {
     setShowModal(false)
-    addEmployee(formData) // Sauvegarde dans le store Zustand
+    // addEmployee(formData) // Sauvegarde dans le store Zustand
     // Reset du formulaire
-    setFormData({
+    /* setFormData({
       firstName: '',
       lastName: '',
       dateOfBirth: '',
@@ -165,8 +178,8 @@ const CreateEmployee = () => {
       state: '',
       zipCode: '',
       department: ''
-    })
-    console.log('Employee saved successfully!')
+    }) */
+    // console.log('Employee saved successfully!')
   }
 
   const handleCloseModal = () => {
