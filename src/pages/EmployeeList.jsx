@@ -196,9 +196,22 @@ const EmployeeList = () => {
               Previous
             </button>
             
-            <span className="page-info">
+            <span className="page-info"> 
               Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
-            </span>
+            </span> 
+            {table.getPageCount() > 1 && (
+              <div className="page-number-buttons">
+                {[...Array(table.getPageCount()).keys()].map((pageIdx) => (
+                  <button
+                    key={pageIdx}
+                    onClick={() => table.setPageIndex(pageIdx)}
+                    className={table.getState().pagination.pageIndex === pageIdx ? 'active' : ''}
+                  >
+                    {pageIdx + 1}
+                  </button>
+                ))}
+              </div>
+            )}
             
             <button
               onClick={() => table.nextPage()}
