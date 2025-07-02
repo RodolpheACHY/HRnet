@@ -7,11 +7,7 @@ import Select from 'react-select'
 import { departments } from '../datas/departments'
 import { states } from '../datas/states'
 
-// Transformer les données pour React Select
-const stateOptions = states.map(state => ({
-  value: state.abbreviation,
-  label: state.name
-}))
+
 
 // Styles personnalisés pour React Select
 const customSelectStyles = {
@@ -49,14 +45,20 @@ const customSelectStyles = {
   })
 }
 
+// Transformer les données pour React Select
+const stateOptions = states.map(state => ({
+  value: state.abbreviation,
+  label: state.name
+}))
+
 // Composant SelectStates
 const SelectStates = (props) => {
   return (
     <Select
       {...props} // passe toutes les props reçues par SelectStates
       options={stateOptions}
-      value={stateOptions.find(option => option.label === props.value)}
-      onChange={(selectedOption) => props.onChange(selectedOption ? selectedOption.label : '')}
+      value={stateOptions.find(option => option.value === props.value)}
+      onChange={(selectedOption) => props.onChange(selectedOption ? selectedOption.value : '')}  // Retourne l'abbréviation
       placeholder="Select a state"
       isClearable
       isSearchable
@@ -99,8 +101,6 @@ const CreateEmployee = () => {
     zipCode: '',
     department: ''
   })
-
-
 
   const [showModal, setShowModal] = useState(false)
   const addEmployee = useEmployeeStore((state) => state.addEmployee)

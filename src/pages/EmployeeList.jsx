@@ -64,7 +64,7 @@ const EmployeeList = () => {
         cell: info => info.getValue(),
       }),
     ],
-    []
+    [columnHelper]
   )
 
   // Configuration de la table

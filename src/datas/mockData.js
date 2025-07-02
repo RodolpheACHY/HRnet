@@ -7,7 +7,7 @@ export const mockEmployees = [
     startDate: "2020-01-15",
     street: "123 Main Street",
     city: "New York",
-    state: "New York",
+    state: "NY",
     zipCode: "10001",
     department: "Engineering"
   },
@@ -18,7 +18,7 @@ export const mockEmployees = [
     startDate: "2019-06-10",
     street: "456 Oak Avenue",
     city: "Los Angeles",
-    state: "California",
+    state: "CA",
     zipCode: "90210",
     department: "Marketing"
   },
@@ -29,7 +29,7 @@ export const mockEmployees = [
     startDate: "2021-03-20",
     street: "789 Pine Road",
     city: "Chicago",
-    state: "Illinois",
+    state: "IL",
     zipCode: "60601",
     department: "Sales"
   },
@@ -40,7 +40,7 @@ export const mockEmployees = [
     startDate: "2020-09-05",
     street: "321 Elm Street",
     city: "Houston",
-    state: "Texas",
+    state: "TX",
     zipCode: "77001",
     department: "Human Resources"
   },
@@ -51,7 +51,7 @@ export const mockEmployees = [
     startDate: "2018-12-01",
     street: "654 Maple Drive",
     city: "Phoenix",
-    state: "Arizona",
+    state: "AZ",
     zipCode: "85001",
     department: "Engineering"
   },
@@ -62,7 +62,7 @@ export const mockEmployees = [
     startDate: "2021-01-15",
     street: "987 Cedar Lane",
     city: "Philadelphia",
-    state: "Pennsylvania",
+    state: "PA",
     zipCode: "19101",
     department: "Marketing"
   },
@@ -73,7 +73,7 @@ export const mockEmployees = [
     startDate: "2019-11-20",
     street: "147 Birch Court",
     city: "San Antonio",
-    state: "Texas",
+    state: "TX",
     zipCode: "78201",
     department: "Sales"
   },
@@ -84,7 +84,7 @@ export const mockEmployees = [
     startDate: "2020-04-10",
     street: "258 Spruce Way",
     city: "San Diego",
-    state: "California",
+    state: "CA",
     zipCode: "92101",
     department: "Human Resources"
   },
@@ -95,7 +95,7 @@ export const mockEmployees = [
     startDate: "2018-07-01",
     street: "369 Willow Street",
     city: "Dallas",
-    state: "Texas",
+    state: "TX",
     zipCode: "75201",
     department: "Engineering"
   },
@@ -106,7 +106,7 @@ export const mockEmployees = [
     startDate: "2021-08-15",
     street: "741 Aspen Avenue",
     city: "San Jose",
-    state: "California",
+    state: "CA",
     zipCode: "95101",
     department: "Marketing"
   },
@@ -117,7 +117,7 @@ export const mockEmployees = [
     startDate: "2017-05-12",
     street: "852 Poplar Road",
     city: "Austin",
-    state: "Texas",
+    state: "TX",
     zipCode: "73301",
     department: "Sales"
   },
@@ -128,7 +128,7 @@ export const mockEmployees = [
     startDate: "2019-02-25",
     street: "963 Sycamore Lane",
     city: "Jacksonville",
-    state: "Florida",
+    state: "FL",
     zipCode: "32099",
     department: "Human Resources"
   },
@@ -139,7 +139,7 @@ export const mockEmployees = [
     startDate: "2020-06-08",
     street: "159 Magnolia Drive",
     city: "Fort Worth",
-    state: "Texas",
+    state: "TX",
     zipCode: "76101",
     department: "Engineering"
   },
@@ -150,7 +150,7 @@ export const mockEmployees = [
     startDate: "2021-10-12",
     street: "357 Redwood Court",
     city: "Columbus",
-    state: "Ohio",
+    state: "OH",
     zipCode: "43201",
     department: "Marketing"
   },
@@ -161,7 +161,7 @@ export const mockEmployees = [
     startDate: "2018-09-30",
     street: "486 Sequoia Way",
     city: "Charlotte",
-    state: "North Carolina",
+    state: "NC",
     zipCode: "28201",
     department: "Sales"
   },
@@ -172,7 +172,7 @@ export const mockEmployees = [
     startDate: "2020-12-03",
     street: "753 Cypress Street",
     city: "San Francisco",
-    state: "California",
+    state: "CA",
     zipCode: "94101",
     department: "Human Resources"
   },
@@ -183,7 +183,7 @@ export const mockEmployees = [
     startDate: "2019-04-18",
     street: "951 Hickory Avenue",
     city: "Indianapolis",
-    state: "Indiana",
+    state: "IN",
     zipCode: "46201",
     department: "Engineering"
   },
@@ -194,7 +194,7 @@ export const mockEmployees = [
     startDate: "2021-05-22",
     street: "264 Walnut Road",
     city: "Seattle",
-    state: "Washington",
+    state: "WA",
     zipCode: "98101",
     department: "Marketing"
   },
@@ -205,7 +205,7 @@ export const mockEmployees = [
     startDate: "2018-11-07",
     street: "573 Chestnut Lane",
     city: "Denver",
-    state: "Colorado",
+    state: "CO",
     zipCode: "80201",
     department: "Sales"
   },
@@ -216,7 +216,7 @@ export const mockEmployees = [
     startDate: "2020-07-14",
     street: "842 Beech Court",
     city: "Washington",
-    state: "District Of Columbia",
+    state: "DC",
     zipCode: "20001",
     department: "Human Resources"
   },
@@ -227,7 +227,7 @@ export const mockEmployees = [
     startDate: "2017-12-01",
     street: "135 Alder Drive",
     city: "Boston",
-    state: "Massachusetts",
+    state: "MA",
     zipCode: "02101",
     department: "Engineering"
   },
@@ -238,7 +238,7 @@ export const mockEmployees = [
     startDate: "2019-08-25",
     street: "468 Fir Way",
     city: "Nashville",
-    state: "Tennessee",
+    state: "TN",
     zipCode: "37201",
     department: "Marketing"
   },
@@ -249,7 +249,7 @@ export const mockEmployees = [
     startDate: "2020-03-11",
     street: "791 Hemlock Street",
     city: "Detroit",
-    state: "Michigan",
+    state: "MI",
     zipCode: "48201",
     department: "Sales"
   },
@@ -260,7 +260,7 @@ export const mockEmployees = [
     startDate: "2021-09-28",
     street: "324 Larch Avenue",
     city: "Portland",
-    state: "Oregon",
+    state: "OR",
     zipCode: "97201",
     department: "Human Resources"
   },
@@ -271,7 +271,7 @@ export const mockEmployees = [
     startDate: "2018-06-15",
     street: "657 Spruce Road",
     city: "Memphis",
-    state: "Tennessee",
+    state: "TN",
     zipCode: "38101",
     department: "Engineering"
   },
@@ -282,7 +282,7 @@ export const mockEmployees = [
     startDate: "2019-10-08",
     street: "189 Pine Lane",
     city: "Oklahoma City",
-    state: "Oklahoma",
+    state: "OK",
     zipCode: "73101",
     department: "Marketing"
   },
@@ -293,7 +293,7 @@ export const mockEmployees = [
     startDate: "2020-11-20",
     street: "423 Oak Court",
     city: "Las Vegas",
-    state: "Nevada",
+    state: "NV",
     zipCode: "89101",
     department: "Sales"
   },
@@ -304,7 +304,7 @@ export const mockEmployees = [
     startDate: "2021-02-14",
     street: "756 Maple Drive",
     city: "Louisville",
-    state: "Kentucky",
+    state: "KY",
     zipCode: "40201",
     department: "Human Resources"
   },
@@ -315,7 +315,7 @@ export const mockEmployees = [
     startDate: "2018-03-05",
     street: "918 Elm Way",
     city: "Baltimore",
-    state: "Maryland",
+    state: "MD",
     zipCode: "21201",
     department: "Engineering"
   },
@@ -326,7 +326,7 @@ export const mockEmployees = [
     startDate: "2019-07-22",
     street: "247 Birch Street",
     city: "Milwaukee",
-    state: "Wisconsin",
+    state: "WI",
     zipCode: "53201",
     department: "Marketing"
   },
@@ -337,7 +337,7 @@ export const mockEmployees = [
     startDate: "2020-05-09",
     street: "539 Cedar Avenue",
     city: "Albuquerque",
-    state: "New Mexico",
+    state: "NM",
     zipCode: "87101",
     department: "Sales"
   },
@@ -348,7 +348,7 @@ export const mockEmployees = [
     startDate: "2021-12-01",
     street: "872 Willow Road",
     city: "Tucson",
-    state: "Arizona",
+    state: "AZ",
     zipCode: "85701",
     department: "Human Resources"
   }
