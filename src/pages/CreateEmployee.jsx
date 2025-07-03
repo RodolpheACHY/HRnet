@@ -166,20 +166,6 @@ const CreateEmployee = () => {
 
   const handleConfirm = () => {
     setShowModal(false)
-    // addEmployee(formData) // Sauvegarde dans le store Zustand
-    // Reset du formulaire
-    /* setFormData({
-      firstName: '',
-      lastName: '',
-      dateOfBirth: '',
-      startDate: '',
-      street: '',
-      city: '',
-      state: '',
-      zipCode: '',
-      department: ''
-    }) */
-    // console.log('Employee saved successfully!')
   }
 
   const handleCloseModal = () => {

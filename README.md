@@ -105,7 +105,12 @@ To build the project for production:
 npm run build
 ```
 
-The built files will be in the `dist` folder.
+To access to the app in production:
+
+```bash
+npm run preview
+```
+The prod app will be reachable on Local to : `http://localhost:4173/`
 
 ## 🤝 Contributing
 
