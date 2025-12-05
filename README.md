@@ -191,7 +191,7 @@ git push origin feature/NouvelleFeature
 
 5. Ouvrir une Pull Request
 
-## Lien vers le composant NPM crée
+## 🔗 Lien vers le composant NPM crée
 
 Modal :  
 https://www.npmjs.com/package/@jamijamo/modal-component
