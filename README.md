@@ -178,6 +178,22 @@ npm run preview
 
 ---
 
+## 📦 Charger des données de démonstration (mock)
+
+Pour faciliter les tests et la démonstration, vous pouvez charger 30 employés fictifs dans l'application.
+
+### Étapes :
+
+1. Ouvrez le fichier **mock-data-loader.js** à la racine du projet.
+2. Copiez l’intégralité de son contenu.
+3. Ouvrez l'application HRnet dans votre navigateur.
+4. Ouvrez la console développeur (`F12` → onglet *Console*).
+5. Collez le script et validez.
+
+Les données seront immédiatement ajoutées au store (Zustand) et sauvegardées dans `localStorage`.
+
+💡 *Pour réinitialiser l'application, videz simplement le localStorage.*
+
 ## 🤝 Contribuer
 
 1. Forker le projet
