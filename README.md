@@ -145,9 +145,9 @@ Application disponible sur :
 
 ## 🤝 Contribuer
 
-1.Forker le projet
+1. Forker le projet
 
-2.Créer une branche :
+2. Créer une branche :
 
 ```
 git checkout -b feature/NouvelleFeature
