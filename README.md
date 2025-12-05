@@ -88,6 +88,8 @@ npm run dev
  👉 Rendez-vous sur :
 http://localhost:5173
 
+---
+
 ## 🎨 Fonctionnalités en détail
 ✔ Formulaire de création  
 - Validation en temps réel
@@ -107,6 +109,8 @@ http://localhost:5173
 - Données conservées après rafraîchissement
 - Gestion propre du store via Zustand
 
+---
+
 ## 🎯 Utilisation
 
 ### Créer un employé
@@ -120,6 +124,8 @@ http://localhost:5173
 3. Triez les colonnes en cliquant sur leur en-tête
 4. Ajustez le nombre d’entrées affichées par page
 
+---
+
 ## 🛠️ Built With
 
 - **React** - Frontend framework
@@ -130,6 +136,8 @@ http://localhost:5173
 - **TanStack Table** - Data table with sorting and filtering
 - **Zustand** - State management
 - **CSS3** - Styling
+
+---
 
 ## 🧱 Structure du projet
 
@@ -149,6 +157,7 @@ src/
 │   └── departments.js
 └── App.jsx              # Composant racine
 ```
+---
 
 ## 🚀 Déploiement
 
@@ -166,6 +175,8 @@ npm run preview
 
 ### Application disponible sur :  
 👉 http://localhost:4173
+
+---
 
 ## 🤝 Contribuer
 
@@ -191,17 +202,25 @@ git push origin feature/NouvelleFeature
 
 5. Ouvrir une Pull Request
 
+---
+
 ## 🔗 Lien vers le composant NPM crée
 
 Modal :  
 https://www.npmjs.com/package/@jamijamo/modal-component
 
+---
+
 ## 📝 Licence  
 Ce projet est distribué sous licence MIT.
+
+---
 
 ## 👨‍💻 Auteur  
 Rodolphe ACHY  
 GitHub : [@RodolpheACHY](https://github.com/RodolpheACHY/)
+
+---
 
 ## 🙏 Remerciements  
 - OpenClassrooms pour le scénario pédagogique  
