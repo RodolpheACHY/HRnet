@@ -107,6 +107,30 @@ http://localhost:5173
 - Données conservées après rafraîchissement
 - Gestion propre du store via Zustand
 
+## 🎯 Utilisation
+
+### Créer un employé
+1. Rendez-vous sur la page « Créer un employé »
+2. Remplissez le formulaire avec les informations de l’employé
+3. Cliquez sur « Enregistrer » pour ajouter l’employé au système
+
+### Consulter les employés
+1. Accédez à la page « Liste des employés »
+2. Utilisez la barre de recherche pour trouver un employé spécifique
+3. Triez les colonnes en cliquant sur leur en-tête
+4. Ajustez le nombre d’entrées affichées par page
+
+## 🛠️ Built With
+
+- **React** - Frontend framework
+- **Vite** - Build tool and development server
+- **React Router** - Navigation
+- **React DatePicker** - Date selection
+- **React Select** - Enhanced select components
+- **TanStack Table** - Data table with sorting and filtering
+- **Zustand** - State management
+- **CSS3** - Styling
+
 ## 🧱 Structure du projet
 
 ```
