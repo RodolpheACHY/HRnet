@@ -1,136 +1,181 @@
-# HRnet - Employee Management System
+# HRnet – Migration d'un plugin jQuery vers React
 
-A modern React application for managing employee data with a user-friendly interface.
+Projet réalisé dans le cadre du parcours **Développeur d’Applications JavaScript / React – OpenClassrooms**.  
+Objectif : **remplacer une librairie jQuery vieillissante par un composant React moderne, performant et maintenable**, tout en améliorant l’interface HRnet, un outil interne de gestion des employés.
 
-## 🚀 Features
+---
 
-- **Create Employee**: Add new employees with comprehensive form validation
-- **Employee List**: View all employees in a sortable and searchable table
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Data Persistence**: Employee data is saved in localStorage
-- **Modern UI**: Clean and intuitive interface built with React
+## 🎯 Objectif du projet
 
-## 📋 Prerequisites
+Ce projet consiste à moderniser une application interne utilisée par une grande société financière.  
+La principale mission : **convertir un plugin jQuery existant en un composant React réutilisable**, entièrement intégré dans l’application.
 
-- Node.js (version 14 or higher)
-- npm or yarn
+Cette migration permet de :
 
-## 🛠️ Installation
+- réduire la **dette technique**
+- améliorer la **performance** et le **rendement DOM**
+- moderniser l’expérience utilisateur
+- renforcer la **maintenabilité** du code
+- standardiser les composants sous React
 
-1. **Clone the repository**
-```bash
+Un rapport de performance avant/après a également été produit.
+
+---
+
+## 🚀 Fonctionnalités principales
+
+- **Création d’employés** (formulaire complet + validations)
+- **Tableau des employés** avec recherche, tri et pagination
+- **Modale React moderne** (remplacement du plugin jQuery)
+- **Design responsive**
+- **Persistance des données dans localStorage**
+- **Interface claire et intuitive**
+
+---
+
+## 🧩 Le composant React (migration jQuery → React)
+
+Dans la version d’origine, HRnet utilisait une librairie jQuery pour la gestion d’une fenêtre modale.
+
+Dans cette refonte :
+
+✔ Un **composant React modulaire**, léger et accessible a été créé  
+✔ Le composant a été isolé, documenté et **publié sous forme de package npm**  
+✔ Le code jQuery a été totalement supprimé  
+✔ Le composant est réutilisable dans n’importe quel projet React
+
+👉 *(Ajouter ici ton lien npm si tu veux le mettre en avant)*
+
+---
+
+## 📊 Analyse des performances
+
+Un audit avant/après migration a été réalisé :
+
+| Critère | Avant (jQuery) | Après (React) |
+|--------|----------------|---------------|
+| Manipulation DOM | ⚠️ élevée | ✅ minimisée |
+| Temps de rendu | ⚠️ plus lent | ✅ amélioré |
+| Maintenabilité | ❌ faible | ⭐ excellente |
+| Accessibilité | ❌ limitée | ⭐ conforme WAI-ARIA |
+
+Le rapport complet est disponible dans `/docs/`.
+
+---
+
+## 🛠️ Installation du projet  
+
+### 1️⃣ Cloner le dépôt  
+
+```
 git clone https://github.com/RodolpheACHY/HRnet.git
 cd HRnet
 ```
 
-2. **Install dependencies**
-```bash
+### 2️⃣ Installer les dépendances  
+
+```
+bash
 npm install
 ```
 
-3. **Start the development server**
-```bash
+### 3️⃣ Lancer en développement  
+```
+bash
 npm run dev
 ```
 
-4. **Open your browser**
-Navigate to `http://localhost:5173`
+👉 Rendez-vous sur :
+http://localhost:5173
 
-## 🎯 Usage
+## 🎨 Fonctionnalités en détail
+✔ Formulaire de création  
+- Validation en temps réel
+- Sélection de dates (React DatePicker)
+- Sélecteurs dynamiques (React Select)
+- Messages d’erreur utilisateurs
 
-### Creating an Employee
-1. Navigate to the "Create Employee" page
-2. Fill out the employee information form
-3. Click "Save" to add the employee to the system
+✔ Tableau des employés
+- Tri par colonne
+- Recherche globale
+- Pagination
+- Interface responsive
+-Table construite avec TanStack Table
 
-### Viewing Employees
-1. Go to "View Current Employees" page
-2. Use the search bar to find specific employees
-3. Sort by any column by clicking the headers
-4. Adjust the number of entries per page
+✔ Persistance des données
+- Stockage local via localStorage
+- Données conservées après rafraîchissement
+- Gestion propre du store via Zustand
 
-## 🛠️ Built With
-
-- **React** - Frontend framework
-- **Vite** - Build tool and development server
-- **React Router** - Navigation
-- **React DatePicker** - Date selection
-- **React Select** - Enhanced select components
-- **TanStack Table** - Data table with sorting and filtering
-- **Zustand** - State management
-- **CSS3** - Styling
-
-## 📁 Project Structure
+## 🧱 Structure du projet
 
 ```
 src/
-├── components/          # Reusable components
+├── components/          # Composants réutilisables
 │   ├── Layout.jsx
 │   ├── Modal.jsx
 │   └── Navigation.jsx
-├── pages/              # Main application pages
+├── pages/               # Pages principales
 │   ├── CreateEmployee.jsx
 │   └── EmployeeList.jsx
-├── store/              # State management
+├── store/               # Store Zustand
 │   └── employeeStore.js
-├── data/               # Static data files
+├── data/                # Données statiques
 │   ├── states.js
 │   └── departments.js
-└── App.jsx             # Main application component
+└── App.jsx              # Composant racine
 ```
 
-## 🎨 Features in Detail
+## 🚀 Déploiement
 
-### Form Validation
-- Required field validation
-- Date range validation
-- Real-time form feedback
+### Build de production
 
-### Data Table
-- Sorting by any column
-- Global search functionality
-- Pagination controls
-- Responsive design for mobile devices
-
-### Data Persistence
-- Automatic saving to localStorage
-- Data survives browser refresh
-- Easy data management
-
-## 🚀 Deployment
-
-To build the project for production:
-
-```bash
+```
 npm run build
 ```
 
-To access to the app in production:
+### Prévisualisation du build
 
-```bash
+```
 npm run preview
 ```
-The prod app will be reachable on Local to : `http://localhost:4173/`
 
-## 🤝 Contributing
+Application disponible sur :  
+👉 http://localhost:4173
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 🤝 Contribuer
 
-## 📝 License
+1.Forker le projet
 
-This project is licensed under the MIT License.
+2.Créer une branche :
 
-## 👨‍💻 Author
+```
+git checkout -b feature/NouvelleFeature
+```
 
-**Your Name**
-- GitHub: [@RodolpheACHY](https://github.com/RodolpheACHY/)
+3. Commit :
 
-## 🙏 Acknowledgments
+```
+git commit -m "Ajout d'une nouvelle fonctionnalité"
+```
 
-- React team for the amazing framework
-- TanStack for the powerful table library
-- All contributors and users of this project
+4. Push :
+
+```
+git push origin feature/NouvelleFeature
+```
+
+5. Ouvrir une Pull Request
+
+## 📝 Licence  
+Ce projet est distribué sous licence MIT.
+
+## 👨‍💻 Auteur  
+Rodolphe ACHY  
+GitHub : [@RodolpheACHY](https://github.com/RodolpheACHY/)
+
+🙏 Remerciements  
+- OpenClassrooms pour le scénario pédagogique  
+- L’équipe React pour l’écosystème puissant  
+- TanStack pour la librairie de tableaux  
+- Tous les testeurs et relecteurs du projet
