@@ -198,7 +198,7 @@ Ce projet est distribué sous licence MIT.
 Rodolphe ACHY  
 GitHub : [@RodolpheACHY](https://github.com/RodolpheACHY/)
 
-🙏 Remerciements  
+## 🙏 Remerciements  
 - OpenClassrooms pour le scénario pédagogique  
 - L’équipe React pour l’écosystème puissant  
 - TanStack pour la librairie de tableaux  
