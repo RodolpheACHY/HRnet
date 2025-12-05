@@ -85,7 +85,7 @@ bash
 npm run dev
 ```
 
-👉 Rendez-vous sur :
+### 👉 Rendez-vous sur :
 http://localhost:5173
 
 ## 🎨 Fonctionnalités en détail
