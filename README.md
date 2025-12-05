@@ -85,7 +85,7 @@ bash
 npm run dev
 ```
 
-### 👉 Rendez-vous sur :
+ 👉 Rendez-vous sur :
 http://localhost:5173
 
 ## 🎨 Fonctionnalités en détail
@@ -164,7 +164,7 @@ npm run build
 npm run preview
 ```
 
-Application disponible sur :  
+### Application disponible sur :  
 👉 http://localhost:4173
 
 ## 🤝 Contribuer
