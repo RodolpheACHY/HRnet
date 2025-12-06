@@ -63,6 +63,15 @@ Le rapport complet est disponible dans `/docs/`.
 
 ---
 
+### Version de Node recommandée
+
+Ce projet utilise Node 18.  
+Si vous utilisez nvm, vous pouvez exécuter :
+
+nvm use
+
+---
+
 ## 🛠️ Installation du projet  
 
 ### 1️⃣ Cloner le dépôt  
