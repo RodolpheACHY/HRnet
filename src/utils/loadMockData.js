@@ -1,10 +1,20 @@
-import { mockEmployees } from '../datas/mockData';
+import mockEmployees from "../datas/employees.json";
+import useEmployeeStore from "../store/employeeStore";
 
-// Fonction pour charger les données de test
-export const loadMockData = (addEmployee) => {
-  console.log('Chargement des données de test...');
+export function loadMockDataOnce() {
+  const store = useEmployeeStore.getState();
+
+  // si des données existent déjà → NE RIEN FAIRE
+  if (store.employees.length > 0) {
+    console.log("Mock déjà chargé — aucune action.");
+    return;
+  }
+
+  console.log("Chargement des employés mockés...");
+
   mockEmployees.forEach(employee => {
-    addEmployee(employee);
+    store.addEmployee(employee);
   });
-  console.log(`${mockEmployees.length} employés chargés avec succès !`);
-}; 
+
+  console.log(`${mockEmployees.length} employés ajoutés.`);
+}
