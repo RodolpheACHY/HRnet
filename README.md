@@ -63,6 +63,12 @@ Le rapport complet est disponible dans `/docs/`.
 
 ---
 
+### Version de Node recommandée
+
+Le projet utilise Node 18 (version recommandée pour garantir compatibilité et stabilité du projet).
+
+---
+
 ## 🛠️ Installation du projet  
 
 ### 1️⃣ Cloner le dépôt  
